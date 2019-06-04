@@ -7,4 +7,4 @@ before_install:
 
 
 script: 
-  - docker run lanceom/react-app-docker npm run test -- --coverage
+  - docker run -e CI=true lanceom/react-app-docker npm run test -- --coverage
