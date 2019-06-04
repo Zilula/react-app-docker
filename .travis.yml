@@ -8,3 +8,22 @@ before_install:
 
 script: 
   - docker run -e CI=true lanceom/react-app-docker npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "react-app-docker"
+  env: "ReactAppDocker-env"
+  bucket_name: "elasticbeanstalk-us-east-1-961408646842"
+  bucket_path: "react-app-docker"
+    on:
+      branch: master
+    access_key_is: $AWS_ACCESS_KEY
+    secret_access_key:
+      secure: "$AWS_SECRET_KEY"
+
+
+
+
+
+  ReactAppDocker-env.exfa4xaqmp.us-east-1.elasticbeanstalk.com
