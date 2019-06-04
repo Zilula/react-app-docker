@@ -23,7 +23,3 @@ deploy:
       secure: "$AWS_SECRET_KEY"
 
 
-
-
-
-  ReactAppDocker-env.exfa4xaqmp.us-east-1.elasticbeanstalk.com
